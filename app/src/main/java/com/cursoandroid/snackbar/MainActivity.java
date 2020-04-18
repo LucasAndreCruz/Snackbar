@@ -25,27 +25,27 @@ public class MainActivity extends AppCompatActivity {
         buttonAbrir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                snackbar = Snackbar.make(
+                Snackbar.make(
                         view,
                         "Botão pressionado",
-                        Snackbar.LENGTH_INDEFINITE
+                        Snackbar.LENGTH_LONG
                 ).setAction("Confirmar", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         //buttonAbrir.setText("Botão abrir alterado");
                     }
-                });
-                snackbar.show();
-
+                }).setActionTextColor(getResources().getColor(R.color.colorPrimaryDark)).show();
             }
         });
 
+        /*
         buttonFechar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 snackbar.dismiss();
             }
         });
+         */
 
     }
 
