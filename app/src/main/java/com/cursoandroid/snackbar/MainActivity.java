@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button buttonAbrir;
     private Button buttonFechar;
+    private Snackbar snackbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAbrir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar snackbar = Snackbar.make(
+                snackbar = Snackbar.make(
                         view,
                         "Botão pressionado",
                         Snackbar.LENGTH_INDEFINITE
@@ -35,6 +36,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 snackbar.show();
+                buttonFechar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        snackbar.dismiss();
+                    }
+                });
             }
         });
 
