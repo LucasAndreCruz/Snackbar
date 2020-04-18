@@ -36,12 +36,14 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 snackbar.show();
-                buttonFechar.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        snackbar.dismiss();
-                    }
-                });
+
+            }
+        });
+
+        buttonFechar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                snackbar.dismiss();
             }
         });
 
